@@ -1,0 +1,19 @@
+<br>
+<div>
+  <input type="file" class="file-upload" (change)="onFileChange($event)" />
+  <button (click)="shuffleData($event)"> Trộn danh sách</button>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th *ngFor="let header of headers">{{ header }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of excelData">
+      <td *ngFor="let header of headers">{{ row[header] }}</td>
+    </tr>
+  </tbody>
+</table>
+

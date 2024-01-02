@@ -1,0 +1,18 @@
+<!-- <ul class="crises">
+  <li *ngFor="let crisis of crises$ | async" [class.selected]="crisis.id === selectedId">
+    <a [routerLink]="[crisis.id]">
+      <span class="badge">{{ crisis.id }}</span>{{ crisis.name }} - Giá trị: {{crisis.price}}
+    </a>
+    <img src="{{crisis.imageUrl}}" alt="My Image" style="width: 100px; height: 100px;"/>
+  </li>
+</ul> -->
+
+<div class="container">
+  <div class="column" *ngFor="let crisis of crises$ | async" [class.selected]="crisis.id === selectedId">
+      <div class="item">
+        <span class="badge">{{ crisis.id }}: </span>{{ crisis.name }} - Giá trị: {{crisis.price}}
+        <img [src]="crisis.imageUrl" alt="{{ crisis.name }}">
+      </div>
+
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="column" *ngFor="let reward of rewards$ | async" [class.selected]="reward.id === selectedId">
+    <div class="item" >
+      <span class="badge">{{ reward.totalDrawNumber }}: </span>{{ reward.name }} - Giá trị: {{reward.price}}
+      <img [src]="reward.imageUrl" alt="{{ reward.name }}">
+      <button (click)="onClickRewards(reward)">Quay quà</button>
+    </div>
+  </div>
+</div>
