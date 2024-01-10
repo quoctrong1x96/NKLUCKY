@@ -5,7 +5,7 @@
     overflow: hidden;
     /* position: relative; */
     padding-top: 2rem;
-    background-image: url('../../../assets/nk/BG.jpg');
+    background-image: url('assets/nk/BG.jpg');
     /* Đường dẫn đến hình nền */
     background-size: cover;
     background-position: center;
@@ -78,16 +78,16 @@ p {
 }
 
 .small-image:nth-child(1) {
-    background-image: url('../../../assets/nk/VPDN.jpg');
+    background-image: url('assets/nk/VPDN.jpg');
     /* Đường dẫn hình ảnh nhỏ 1 */
 }
 
 .small-image:nth-child(2) {
-    background-image: url('../../../assets/nk/VPHCM.jpg');
+    background-image: url('assets/nk/VPHCM.jpg');
     /* Đường dẫn hình ảnh nhỏ 2 */
 }
 
 .small-image:nth-child(3) {
-    background-image: url('../../../assets/nk/VPHN.jpg');
+    background-image: url('assets/nk/VPHN.jpg');
     /* Đường dẫn hình ảnh nhỏ 2 */
 }
