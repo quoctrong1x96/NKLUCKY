@@ -1,16 +1,1 @@
-<div class="wrapper">
-  <h1 class="title">NK ENGINEERING - LUCKY DRAW</h1>
-  <nav>
-    <a routerLink="/upload-excel" routerLinkActive="active" ariaCurrentWhenActive="page">Kiểm tra danh sách</a>
-    <a routerLink="/list-reward" routerLinkActive="active" ariaCurrentWhenActive="page">Giải thưởng</a>
-    <a routerLink="/random-round" routerLinkActive="active" ariaCurrentWhenActive="page"
-      style="background-color: cyan;">Lucky draw</a>
-    <a routerLink="/admin" routerLinkActive="active" ariaCurrentWhenActive="page">Danh sách đạt giải</a>
-    <a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">Nền trao giải</a>
-  </nav>
-  <div></div>
-  <div [@routeAnimation]="getRouteAnimationData()">
-    <router-outlet></router-outlet>
-  </div>
-  <router-outlet name="popup"></router-outlet>
-</div>
+<router-outlet></router-outlet>

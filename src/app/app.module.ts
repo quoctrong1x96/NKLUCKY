@@ -6,15 +6,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Router } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HeroesModule } from './heroes/heroes.module';
 import { AuthModule } from './auth/auth.module';
-import { ComposeMessageComponent } from './compose-message/compose-message.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { CommonModule } from '@angular/common';
 import { UploadExcelComponent } from './pages/uploadExcel/uploadExcel.component';
 import { RandomRoundComponent } from './pages/random-round/random-round.component';
 import { ListRewardComponent } from './pages/list-reward/list-reward.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { HomeComponent } from './pages/home/home.component';
+
 
 
 @NgModule({
@@ -22,7 +22,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    HeroesModule,
     AuthModule,
     AppRoutingModule,
     CommonModule, 
@@ -30,11 +29,11 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
   ],
   declarations: [
     AppComponent,
-    ComposeMessageComponent,
     PageNotFoundComponent,
     UploadExcelComponent,
     RandomRoundComponent,
-    ListRewardComponent
+    ListRewardComponent,
+    HomeComponent
   ],
   bootstrap: [ AppComponent ]
 })

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ComposeMessageComponent } from './compose-message/compose-message.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 import { authGuard } from './auth/auth.guard';
@@ -9,8 +8,14 @@ import { SelectivePreloadingStrategyService } from './selective-preloading-strat
 import { UploadExcelComponent } from './pages/uploadExcel/uploadExcel.component';
 import { RandomRoundComponent } from './pages/random-round/random-round.component';
 import { ListRewardComponent } from './pages/list-reward/list-reward.component';
+import { HomeComponent } from './pages/home/home.component';
 
 const appRoutes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  {
+    path: 'home',
+    component: HomeComponent, data: { preload: true }
+  },
   {
     path: 'upload-excel',
     component: UploadExcelComponent,
@@ -20,27 +25,18 @@ const appRoutes: Routes = [
     path: 'random-round',
     component: RandomRoundComponent,
     data: { preload: true }
-  },{
+  }, {
     path: 'list-reward',
     component: ListRewardComponent,
     data: { preload: true }
-  },
-  {
-    path: 'compose',
-    component: ComposeMessageComponent,
-    outlet: 'popup'
   },
   {
     path: 'admin',
     loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
     canMatch: [authGuard]
   },
-  {
-    path: 'crisis-center',
-    loadChildren: () => import('./crisis-center/crisis-center.module').then(m => m.CrisisCenterModule),
-    data: { preload: true }
-  },
-  { path: '',   redirectTo: '/superheroes', pathMatch: 'full' },
+
+
   { path: '**', component: PageNotFoundComponent }
 ];
 
